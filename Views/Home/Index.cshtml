@@ -1,0 +1,27 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@if (SignInManager.IsSignedIn(User))
+{
+
+}
+else
+{
+    <div style="width:50%; height:50%; margin-top:15%; font-family:Dubai;">
+        <p>
+            “A good book is like a good friend. It will stay with you for the rest of your life.
+            When you first get to know it, it will give you excitement and adventure,
+            and years later it will provide you with comfort and familiarity. And best of all,
+            you can share it with your children or your grandchildren or anyone you love enough to let into its secrets.”
+        </p>
+        <h5 style="float:right;">
+            "
+            Charlie Lovett"
+        </h5>
+    </div>
+}
+
